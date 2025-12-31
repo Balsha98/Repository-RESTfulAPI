@@ -3,11 +3,11 @@ const mysql = require("mysql");
 
 // Class
 class Database {
-    #dbConn;
-    #DB = "company_data";
     #HOST = "localhost";
     #USER = "root";
     #PASS = "";
+    #DB = "company_data";
+    #dbConn;
 
     /**
      * Default constructor.
