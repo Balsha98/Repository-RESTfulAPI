@@ -1,6 +1,6 @@
 # RESTfulAPI - Simple RESTful API Implementation
 
-A RESTful API built with Node.js for managing company, employee, and timecard data. Features a three-layer architecture with comprehensive data validation.
+A RESTful API built with Node.js for managing department, employee, and timecard data. Features a three-layer architecture with comprehensive data validation.
 
 ## Features
 
@@ -8,9 +8,9 @@ A RESTful API built with Node.js for managing company, employee, and timecard da
 -   **Three-Layer Design** - Separation of concerns with service, business, and data layers.
 -   **Data Validation** - Robust validation using Joi,
 -   **MySQL Integration** - Relational database for data persistence,
--   **Express Framework** - Fast and minimal web framework,
+-   **Express Framework** - Fast and minimal web framework.
 -   **Auto-Restart** - Nodemon for automatic server restarts during development.
--   **Company Management** - CRUD operations for company data.
+-   **Department Management** - CRUD operations for department data.
 -   **Employee Management** - Complete employee information handling.
 -   **Timecard Tracking** - Employee timecard management system.
 
@@ -90,11 +90,11 @@ npm install
 4. Configure database connection:
 
 ```javascript
-// Edit config/database.js or create a .env file
-DB_HOST = localhost;
-DB_USER = root;
-DB_PASSWORD = "";
-DB_NAME = company_data;
+// Edit database.js script.
+HOST = localhost;
+USER = root;
+PASS = "";
+DB = company_data;
 ```
 
 5. Import the database schema:
@@ -120,119 +120,100 @@ http://localhost:8080
 ### Company Endpoints
 
 ```
-GET    /api/companies       - Get all companies
-GET    /api/companies/:id   - Get company by ID
-POST   /api/companies       - Create new company
-PUT    /api/companies/:id   - Update company
-DELETE /api/companies/:id   - Delete company
+DELETE /CompanyServices/company?compName=yourCompany                         - Delete company departments.
+```
+
+### Department Endpoints
+
+```
+GET    /CompanyServices/departments?compName=yourCompany                     - Get all departments for company.
+GET    /CompanyServices/department?deptID=yourDeptID&compName=yourCompany    - Get department by ID.
+POST   /CompanyServices/department                                           - Create new department.
+PUT    /CompanyServices/department                                           - Update department.
+DELETE /CompanyServices/department?deptID=yourDeptID&compName=yourCompany    - Delete department.
 ```
 
 ### Employee Endpoints
 
 ```
-GET    /api/employees       - Get all employees
-GET    /api/employees/:id   - Get employee by ID
-POST   /api/employees       - Create new employee
-PUT    /api/employees/:id   - Update employee
-DELETE /api/employees/:id   - Delete employee
+GET    /CompanyServices/employees?compName=yourCompany                       - Get all employees for company.
+GET    /CompanyServices/employee?empID=yourEmpID                             - Get employee by ID.
+POST   /CompanyServices/employee                                             - Create new employee.
+PUT    /CompanyServices/employee                                             - Update employee.
+DELETE /CompanyServices/employee?empID=yourEmpID                             - Delete employee.
 ```
 
 ### Timecard Endpoints
 
 ```
-GET    /api/timecards              - Get all timecards
-GET    /api/timecards/:id          - Get timecard by ID
-GET    /api/employees/:id/timecards - Get timecards for employee
-POST   /api/timecards              - Create new timecard
-PUT    /api/timecards/:id          - Update timecard
-DELETE /api/timecards/:id          - Delete timecard
+GET    /CompanyServices/timecards?empID=yourEmpID                            - Get all timecards for employee.
+GET    /CompanyServices/timecard?cardID=yourCardID                           - Get timecard by ID.
+POST   /CompanyServices/timecard                                             - Create new timecard.
+PUT    /CompanyServices/timecard                                             - Update timecard.
+DELETE /CompanyServices/timecard?cardID=yourCardID                           - Delete timecard.
 ```
 
 ## Project Structure
 
 ```
-Repository-RESTfulAPI/
-│
-├── config/
-│   └── database.js         # Database configuration
-│
-├── layers/
-│   ├── service/            # Service layer
-│   │   ├── routes/         # Route definitions
-│   │   └── controllers/    # Request handlers
-│   │
-│   ├── business/           # Business layer
-│   │   ├── validation/     # Joi validation schemas
-│   │   └── logic/          # Business logic
-│   │
-│   └── data/               # Data layer
-│       ├── company.js      # Company data operations
-│       ├── employee.js     # Employee data operations
-│       └── timecard.js     # Timecard data operations
-│
-├── database/
-│   └── schema.sql          # Database schema
-│
-├── server.js               # Application entry point
-├── package.json            # Dependencies and scripts
-└── README.md               # Project documentation
-```
 
-## Request/Response Examples
-
-### Create Company
-
-```bash
-POST /api/companies
-Content-Type: application/json
-
-{
-  "company_name": "Tech Corp",
-  "address": "123 Main St",
-  "phone": "555-0100",
-  "email": "contact@techcorp.com"
-}
-```
-
-### Create Employee
-
-```bash
-POST /api/employees
-Content-Type: application/json
-
-{
-  "company_id": 1,
-  "first_name": "John",
-  "last_name": "Doe",
-  "email": "john.doe@techcorp.com",
-  "phone": "555-0101",
-  "hire_date": "2024-01-15"
-}
-```
-
-### Create Timecard
-
-```bash
-POST /api/timecards
-Content-Type: application/json
-
-{
-  "employee_id": 1,
-  "date": "2024-01-20",
-  "hours_worked": 8,
-  "description": "Software development tasks"
-}
 ```
 
 ## Data Validation
 
 The API uses Joi for comprehensive data validation:
 
--   **Required fields** - Ensures all mandatory fields are provided
--   **Data types** - Validates correct data types
--   **String formats** - Email, phone number format validation
--   **Numeric ranges** - Hours worked limits, ID validation
--   **Date formats** - Proper date validation
+-   **Required Fields** - Ensures all mandatory fields are provided.
+-   **Data Types** - Validates correct data types.
+-   **String Formats** - Email, phone number format validation.
+-   **Numeric Ranges** - Hours worked limits, ID validation.
+-   **Date Formats** - Proper date validation.
+
+## Request Examples
+
+### Create Department
+
+```bash
+POST /CompanyServices/department
+Content-Type: application/json
+
+{
+    "compName": "Company",
+    "deptName": "HR",
+    "deptNum": "A1001",
+    "deptLoc": "Building A"
+}
+```
+
+### Create Employee
+
+```bash
+POST /CompanyServices/employee
+Content-Type: application/json
+
+{
+    "deptID": 1,
+    "empName": "John",
+    "empNum": "E1",
+    "hireDate": "2025-12-31",
+    "jobPos": "Developer",
+    "salary": 5000,
+    "mngID": 1
+}
+```
+
+### Create Timecard
+
+````bash
+POST /CompanyServices/timecard
+Content-Type: application/json
+
+{
+    "empID": 1,
+    "startTime": "2025-12-31 06:00:00",
+    "endTime": "2025-12-31 18:00:00"
+}
+```
 
 ## Dependencies
 
@@ -243,7 +224,7 @@ The API uses Joi for comprehensive data validation:
     "mysql": "^2.18.1",
     "nodemon": "^3.1.7"
 }
-```
+````
 
 ## Let's Connect
 
