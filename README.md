@@ -204,7 +204,7 @@ Content-Type: application/json
 
 ### Create Timecard
 
-````bash
+```bash
 POST /CompanyServices/timecard
 Content-Type: application/json
 
@@ -224,7 +224,7 @@ Content-Type: application/json
     "mysql": "^2.18.1",
     "nodemon": "^3.1.7"
 }
-````
+```
 
 ## Let's Connect
 
