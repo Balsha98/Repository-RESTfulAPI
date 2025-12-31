@@ -6,8 +6,8 @@ A RESTful API built with Node.js for managing department, employee, and timecard
 
 -   **RESTful Architecture** - Standard HTTP methods and endpoints.
 -   **Three-Layer Design** - Separation of concerns with service, business, and data layers.
--   **Data Validation** - Robust validation using Joi,
--   **MySQL Integration** - Relational database for data persistence,
+-   **Data Validation** - Robust validation using Joi.
+-   **MySQL Integration** - Relational database for data persistence.
 -   **Express Framework** - Fast and minimal web framework.
 -   **Auto-Restart** - Nodemon for automatic server restarts during development.
 -   **Department Management** - CRUD operations for department data.
