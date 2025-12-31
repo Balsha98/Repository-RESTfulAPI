@@ -1,0 +1,110 @@
+// ***** ALL ***** //
+METHOD #1 (deleteAll)
+INPUT: bb8512 (compName)
+// ALL GOOD
+
+// ***** DEPARTMENT ***** //
+METHOD #2 (getDepartment)
+INPUT: {
+    "compName": "bb8512", 
+    "deptID": 2
+}
+// ALL GOOD
+
+METHOD #3 (getAllDepartments)
+INPUT: bb8512 (compName)
+// ALL GOOD
+
+METHOD #4 (insertDepartment)
+INPUT: {
+    "compName": "bb8512", 
+    "deptName": "HR", 
+    "deptNum": "D1003", 
+    "deptLoc": "Building D"
+}
+// ALL GOOD
+
+METHOD #5 (updateDepartment)
+INPUT: {
+    "deptID": 1, 
+    "compName": "rituserid", 
+    "deptName": "mystery", 
+    "deptNum": "d10", 
+    "deptLoc": "buffalo"
+}
+// ALL GOOD
+
+METHOD #6 (deleteDepartment)
+INPUT: {
+    "deptID" : 2, 
+    "compName": "bb8512"
+}
+// ALL GOOD
+
+// ***** EMPLOYEE ***** //
+METHOD #7 (getEmployee)
+INPUT: 2 (empID)
+// ALL GOOD
+
+METHOD #8 (getAllEmployees)
+INPUT: bb8512 (compName)
+// ALL GOOD
+
+METHOD #9 (insertEmployee)
+INPUT: { 
+    "deptID": 1, 
+    "empName": "Baza", 
+    "empNum": "rituserid-e1b", 
+    "hireDate": "2024-10-31", 
+    "jobPos": "programmer", 
+    "salary": 5000.0, 
+    "mngID": 2
+}
+// ALL GOOD
+
+METHOD #10 (updateEmployee)
+INPUT: {
+    "empID": 15,
+    "deptID": 1,
+    "empName": "french",
+    "empNum": "rituserid-e1b",
+    "hireDate": "2018-06-16",
+    "jobPos": "programmer",
+    "salary": 6000.0,
+    "mngID": 2
+}
+// ALL GOOD
+
+METHOD #11 (deleteEmployee)
+INPUT: 5 (empID)
+// ALL GOOD
+
+// ***** TIMECARD ***** //
+METHOD #12 (getTimecard)
+INPUT: 2 (cardID)
+// ALL GOOD
+
+METHOD #13 (getAllTimecards)
+INPUT: 2 (empID)
+// ALL GOOD
+
+METHOD #14 (insertTimecard)
+INPUT: {
+    "empID": 2,
+    "startTime": "2024-10-29 10:15:00",
+    "endTime": "2024-10-29 11:15:00"
+}
+// ALL GOOD
+
+METHOD #15 (updateTimecard)
+INPUT: {
+    "cardID": 1,
+    "empID": 2,
+    "startTime": "2024-10-30 10:15:00",
+    "endTime": "2024-10-30 11:15:00"
+}
+// ALL GOOD
+
+METHOD #16 (deleteTimecard)
+INPUT: 5
+// ALL GOOD

@@ -1,2 +1,1 @@
-# Repository-RESTfulAPI
-RESTfulAPI - Simple RESTful API Implementation
+# RESTfulAPI - Simple RESTful API Implementation
