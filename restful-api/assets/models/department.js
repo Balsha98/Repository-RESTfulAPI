@@ -122,4 +122,4 @@ class Department {
 }
 
 // Default export.
-export default Department;
+module.exports = Department;

@@ -60,4 +60,4 @@ class Database {
 }
 
 // Default export.
-export default Database;
+module.exports = Database;

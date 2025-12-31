@@ -184,4 +184,4 @@ class ServiceLayer {
 }
 
 // Default export.
-export default ServiceLayer;
+module.exports = ServiceLayer;

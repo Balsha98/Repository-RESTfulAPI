@@ -511,4 +511,4 @@ class BusinessLayer {
 }
 
 // Default export.
-export default BusinessLayer;
+module.exports = BusinessLayer;

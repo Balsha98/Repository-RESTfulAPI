@@ -116,4 +116,4 @@ class Message {
 }
 
 // Default export.
-export default Message;
+module.exports = Message;

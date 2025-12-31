@@ -33,4 +33,4 @@ class Format {
 }
 
 // Default export.
-export default Format;
+module.exports = Format;

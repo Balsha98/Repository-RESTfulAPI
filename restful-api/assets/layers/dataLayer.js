@@ -338,4 +338,4 @@ class DataLayer {
 }
 
 // Default export.
-export default DataLayer;
+module.exports = DataLayer;

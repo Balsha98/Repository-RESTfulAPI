@@ -109,4 +109,4 @@ class Timecard {
 }
 
 // Default export.
-export default Timecard;
+module.exports = Timecard;

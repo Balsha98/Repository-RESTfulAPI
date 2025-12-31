@@ -163,4 +163,4 @@ class Validate {
 }
 
 // Default export.
-export default Validate;
+module.exports = Validate;
