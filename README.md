@@ -156,7 +156,27 @@ DELETE /CompanyServices/timecard?cardID=yourCardID                           - D
 ## Project Structure
 
 ```
-
+Repository-RESTfulAPI/
+│
+├── restful-api/        # Main application directory.
+│   │
+│   ├── assets/         # Application assets.
+│   │   │
+│   │   ├── database/           # Database files.
+│   │   │
+│   │   ├── docs/               # Additional documentation.
+│   │   │
+│   │   ├── helpers/            # Helper utilities.
+│   │   │
+│   │   ├── layers/             # Three-layer architecture.
+│   │   │
+│   │   └── models/             # Data models.
+│   │
+│   ├── package-lock.json       # Locked dependencies.
+│   ├── package.json            # Dependencies and scripts.
+│   └── server.js               # Application entry point.
+│
+└── README.md           # Project documentation.
 ```
 
 ## Data Validation
@@ -219,10 +239,10 @@ Content-Type: application/json
 
 ```json
 {
-    "express": "^4.21.1",
-    "joi": "^13.1.0",
-    "mysql": "^2.18.1",
-    "nodemon": "^3.1.7"
+	"express": "^4.21.1",
+	"joi": "^13.1.0",
+	"mysql": "^2.18.1",
+	"nodemon": "^3.1.7"
 }
 ```
 
