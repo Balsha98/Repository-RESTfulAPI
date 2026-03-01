@@ -4,23 +4,23 @@ A RESTful API built with Node.js for managing department, employee, and timecard
 
 ## Features
 
--   **RESTful Architecture** - Standard HTTP methods and endpoints.
--   **Three-Layer Design** - Separation of concerns with service, business, and data layers.
--   **Data Validation** - Robust validation using Joi.
--   **MySQL Integration** - Relational database for data persistence.
--   **Express Framework** - Fast and minimal web framework.
--   **Auto-Restart** - Nodemon for automatic server restarts during development.
--   **Department Management** - CRUD operations for department data.
--   **Employee Management** - Complete employee information handling.
--   **Timecard Tracking** - Employee timecard management system.
+- **RESTful Architecture** - Standard HTTP methods and endpoints.
+- **Three-Layer Design** - Separation of concerns with service, business, and data layers.
+- **Data Validation** - Robust validation using Joi.
+- **MySQL Integration** - Relational database for data persistence.
+- **Express Framework** - Fast and minimal web framework.
+- **Auto-Restart** - Nodemon for automatic server restarts during development.
+- **Department Management** - CRUD operations for department data.
+- **Employee Management** - Complete employee information handling.
+- **Timecard Tracking** - Employee timecard management system.
 
 ## Tech Stack
 
--   **Node.js** - Runtime Environment
--   **Express** - Web Application Framework
--   **MySQL** - Relational Database
--   **Joi** - Data Validation Library
--   **Nodemon** - Development Auto-Restart Utility
+- **Node.js** - Runtime Environment
+- **Express** - Web Application Framework
+- **MySQL** - Relational Database
+- **Joi** - Data Validation Library
+- **Nodemon** - Development Auto-Restart Utility
 
 ## Architecture
 
@@ -28,24 +28,24 @@ The application follows a three-layer architecture pattern:
 
 ### Service Layer
 
--   Handles HTTP requests and responses.
--   Routes incoming requests to appropriate handlers.
--   Passes data to the business layer.
--   Returns responses to clients.
+- Handles HTTP requests and responses.
+- Routes incoming requests to appropriate handlers.
+- Passes data to the business layer.
+- Returns responses to clients.
 
 ### Business Layer
 
--   Validates incoming data using Joi.
--   Implements business logic and rules.
--   Invokes data layer for database operations.
--   Processes and transforms data.
+- Validates incoming data using Joi.
+- Implements business logic and rules.
+- Invokes data layer for database operations.
+- Processes and transforms data.
 
 ### Data Layer
 
--   Manages database connections.
--   Executes SQL queries.
--   Performs CRUD operations.
--   Returns data to business layer.
+- Manages database connections.
+- Executes SQL queries.
+- Performs CRUD operations.
+- Returns data to business layer.
 
 ```
 Client Request
@@ -63,9 +63,9 @@ MySQL Database
 
 ### Prerequisites
 
--   Node.js 14.0 or higher.
--   MySQL server.
--   npm (Node Package Manager).
+- Node.js 14.0 or higher.
+- MySQL server.
+- npm (Node Package Manager).
 
 ### Setup Instructions
 
@@ -183,11 +183,11 @@ Repository-RESTfulAPI/
 
 The API uses Joi for comprehensive data validation:
 
--   **Required Fields** - Ensures all mandatory fields are provided.
--   **Data Types** - Validates correct data types.
--   **String Formats** - Email, phone number format validation.
--   **Numeric Ranges** - Hours worked limits, ID validation.
--   **Date Formats** - Proper date validation.
+- **Required Fields** - Ensures all mandatory fields are provided.
+- **Data Types** - Validates correct data types.
+- **String Formats** - Email, phone number format validation.
+- **Numeric Ranges** - Hours worked limits, ID validation.
+- **Date Formats** - Proper date validation.
 
 ## Request Examples
 
@@ -250,6 +250,7 @@ Content-Type: application/json
 
 If you enjoyed this project or have any questions, feel free to reach out!
 
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white)](https://bazovich.dev)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:balsa.bazovic@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/balsha-bazovich)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Balsha98)
